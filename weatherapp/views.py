@@ -5,8 +5,8 @@ from pprint import pprint
 
 def index(request):
     API_KEY = config("API_KEY")
-    city = "Ankara"
-    url =f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}"
+    city = "Eskişehir"
+    url =f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric"
     response = requests.get(url)
     #? We converted the incoming data to python dictionary format 👇
     content = response.json()
