@@ -1,4 +1,4 @@
-let element = document.querySelector('.message');
+let element = document.querySelector('.messages');
 
 setTimeout(function () {
   element.style.display = 'none';
