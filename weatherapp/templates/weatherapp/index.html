@@ -11,11 +11,11 @@
     <h1>Weather App</h1>
 
     {% if messages %}
-        
+
     {% for message in  messages%}
             <div class="message">{{ message }}</div>
     {% endfor %}
-        
+
     {% endif %}
     <hr>
     <br>
@@ -27,14 +27,15 @@
     </form>
     <br>
 
-    
+
     {% for i in city_data  %}
         {{i.city}} <br>
         {{i.temp}} &#8451 <br>
         <img src="http://openweathermap.org/img/wn/{{i.icon}}@2x.png" alt=""> <br>
         {{i.desc}} <br>
+        <button><a href="{% url 'delete' i.city.id %}">Delete</button>
+        <hr>
     {% endfor %}
-        
 
 
     <script src="{% static 'weatherapp/js/timeout.js' %}"></script>
